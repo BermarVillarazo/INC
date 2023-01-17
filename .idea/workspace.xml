@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="245b536c-a05c-4806-9c93-504faa5a9845" name="Changes" comment=" MILESTONE A: Show the GUI &amp; MILESTONE B: Create the ComboBox for figures.">
-      <change afterPath="$PROJECT_DIR$/src/INC_oop/Figure.java" afterDir="false" />
+    <list default="true" id="245b536c-a05c-4806-9c93-504faa5a9845" name="Changes" comment=" MILESTONE C: Create Figure class and subclasses.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/INC_oop/INC_FORM.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/INC_oop/INC_FORM.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/INC_oop/INC_FORM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/INC_oop/INC_FORM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/INC_oop/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673957115085</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=" MILESTONE C: Create Figure class and subclasses.">
+      <created>1673964612663</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673964612663</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -83,6 +88,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" MILESTONE A: Show the GUI &amp; MILESTONE B: Create the ComboBox for figures." />
-    <option name="LAST_COMMIT_MESSAGE" value=" MILESTONE A: Show the GUI &amp; MILESTONE B: Create the ComboBox for figures." />
+    <MESSAGE value=" MILESTONE C: Create Figure class and subclasses." />
+    <option name="LAST_COMMIT_MESSAGE" value=" MILESTONE C: Create Figure class and subclasses." />
   </component>
 </project>

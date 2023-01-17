@@ -2,6 +2,7 @@ package INC_oop;
 
 import javax.swing.*;
 
+
 public class INC_FORM extends JFrame {
     private javax.swing.JPanel JPanel;
     private JComboBox cbFigures;
@@ -15,8 +16,6 @@ public class INC_FORM extends JFrame {
     private JLabel lblOne;
     private JLabel lblTwo;
     private JLabel lblThree;
-
-
 
     public static void main(String[] args) {
         INC_FORM inc = new INC_FORM();

@@ -128,7 +128,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <editable value="false"/>
+            </properties>
           </component>
           <component id="4b426" class="javax.swing.JTextField" binding="tfSA">
             <constraints>
@@ -136,7 +138,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <editable value="false"/>
+            </properties>
           </component>
           <component id="97bd7" class="javax.swing.JButton" binding="clearButton" default-binding="true">
             <constraints>
