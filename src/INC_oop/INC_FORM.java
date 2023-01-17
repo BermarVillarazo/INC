@@ -3,15 +3,20 @@ package INC_oop;
 import javax.swing.*;
 
 public class INC_FORM extends JFrame {
-    private JComboBox comboBox1;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JButton clearButton;
-    private JButton calculateFigureButton;
     private javax.swing.JPanel JPanel;
+    private JComboBox cbFigures;
+    private JTextField tfOne;
+    private JTextField tfTwo;
+    private JTextField tfThree;
+    private JTextField tfVolume;
+    private JTextField tfSA;
+    private JButton clearButton;
+    private JButton btnCalculate;
+    private JLabel lblOne;
+    private JLabel lblTwo;
+    private JLabel lblThree;
+
+
 
     public static void main(String[] args) {
         INC_FORM inc = new INC_FORM();
