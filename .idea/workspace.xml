@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="245b536c-a05c-4806-9c93-504faa5a9845" name="Changes" comment=" MILESTONE C: Create Figure class and subclasses.">
+    <list default="true" id="245b536c-a05c-4806-9c93-504faa5a9845" name="Changes" comment="MILESTONE D: Create and show fields for each figure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/INC_oop/INC_FORM.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/INC_oop/INC_FORM.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/INC_oop/INC_FORM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/INC_oop/INC_FORM.java" afterDir="false" />
@@ -72,7 +72,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673964612663</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=" MILESTONE C: Create Figure class and subclasses.">
+      <created>1673965562931</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673965562931</updated>
+    </task>
+    <task id="LOCAL-00005" summary="MILESTONE D: Create and show fields for each figure">
+      <created>1673965714950</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673965714950</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,6 +103,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" MILESTONE A: Show the GUI &amp; MILESTONE B: Create the ComboBox for figures." />
     <MESSAGE value=" MILESTONE C: Create Figure class and subclasses." />
-    <option name="LAST_COMMIT_MESSAGE" value=" MILESTONE C: Create Figure class and subclasses." />
+    <MESSAGE value="MILESTONE D: Create and show fields for each figure" />
+    <option name="LAST_COMMIT_MESSAGE" value="MILESTONE D: Create and show fields for each figure" />
   </component>
 </project>

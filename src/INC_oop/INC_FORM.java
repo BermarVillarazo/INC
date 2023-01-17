@@ -29,6 +29,20 @@ public class INC_FORM extends JFrame {
         tfOne.setVisible(false);
         tfTwo.setVisible(false);
         tfThree.setVisible(false);
+
+        //  MILESTONE G: Implement Clear button
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tfOne.setText(null);
+                tfTwo.setText(null);
+                tfThree.setText(null);
+                tfVolume.setText(null);
+                tfSA.setText(null);
+            }
+        });
+
+        // MILESTONE D: Create and show fields for each figure
         cbFigures.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
@@ -146,7 +160,7 @@ public class INC_FORM extends JFrame {
                                 public void actionPerformed(ActionEvent e) {
                                     String getBaseAreaP = tfOne.getText();
                                     double radiusP = Double.parseDouble(getBaseAreaP);
-                                    String getHeightP = tfOne.getText();
+                                    String getHeightP = tfTwo.getText();
                                     double heightP = Double.parseDouble(getHeightP);
 
                                     Figure.Prism prism = new Figure.Prism(radiusP, heightP);
@@ -200,7 +214,7 @@ public class INC_FORM extends JFrame {
                                 public void actionPerformed(ActionEvent e) {
                                     String getBaseAreaPy = tfOne.getText();
                                     double baseAreaPy = Double.parseDouble(getBaseAreaPy);
-                                    String getHeightPy = tfOne.getText();
+                                    String getHeightPy = tfTwo.getText();
                                     double heightPy = Double.parseDouble(getHeightPy);
 
                                     Figure.Pyramid pyramid = new Figure.Pyramid(baseAreaPy, heightPy);
@@ -341,6 +355,8 @@ public class INC_FORM extends JFrame {
         });
     }
 
+    // MILESTONE A: Show the GUI
+    // MILESTONE B: Create the ComboBox for figures
     public static void main(String[] args) {
         INC_FORM inc = new INC_FORM();
         inc.setTitle("Figure");
