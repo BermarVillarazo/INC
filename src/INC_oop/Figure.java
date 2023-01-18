@@ -1,6 +1,6 @@
 package INC_oop;
 // MILESTONE C: Create Figure Class and subclasses
-public abstract class Figure {
+public abstract class Figure implements Comparable<Figure> {
     double volume;
     double surfaceArea;
 
@@ -24,6 +24,18 @@ public abstract class Figure {
         return "Figure: " + "(" + volume + ", " + surfaceArea + ")";
     }
 
+    public int compareTo(Figure other) {
+        int vol = (int) this.volume;
+        int sur = (int) this.surfaceArea;
+        if (vol > other.volume || sur < other.surfaceArea) {
+            return -1;
+        } else if (vol < other.volume || sur > other.surfaceArea) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
     public static class RectangularSolid extends Figure {
         double length;
         double width;
@@ -36,10 +48,10 @@ public abstract class Figure {
             volume = length * width * height;
             surfaceArea = 2 * (length * width + width * height + length * height);
         }
-
         public String toString() {
             return "Rectangular Solid: " + "(" + volume + ", " + surfaceArea + ")";
         }
+
     }
 
     public static class Cube extends RectangularSolid {

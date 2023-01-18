@@ -5,8 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-import java.rmi.server.ExportException;
-import java.util.Objects;
+import java.util.*;
 
 public class INC_FORM extends JFrame {
     private javax.swing.JPanel JPanel;
@@ -22,7 +21,14 @@ public class INC_FORM extends JFrame {
     private JTextField tfSA;
     private JButton saveButton;
     private JButton clearButton;
-    private JList list1;
+    private JButton loadButton;
+    private JTextArea savedArea;
+    private JTextArea tfLoad;
+    private JButton volBtn;
+    private JButton SABtn;
+    private JButton figureBtn;
+
+    List<Figure> figures = new ArrayList<>();
 
     public INC_FORM() {
         lblOne.setVisible(false);
@@ -32,12 +38,200 @@ public class INC_FORM extends JFrame {
         tfOne.setVisible(false);
         tfTwo.setVisible(false);
         tfThree.setVisible(false);
+        volBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Sort the figures list by volume
+                Collections.sort(figures);
+
+                // Clear the text area
+                tfLoad.setText("SORTED as Volume: \n");
+
+                // Print the sorted list of figures to the text area
+                for (Figure f : figures) {
+                    tfLoad.append(f.toString() + "\n");
+                }
+            }
+        });
+
+        SABtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Sort the figures list by volume
+                Collections.sort(figures);
+
+                // Clear the text area
+                tfLoad.setText("SORTED as Surface Area: \n");
+
+                // Print the sorted list of figures to the text area
+                for (Figure f : figures) {
+                    tfLoad.append(f.toString() + "\n");
+                }
+            }
+        });
+
+        figureBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Sort the figures list by volume
+                Collections.sort(figures);
+
+                // Clear the text area
+                tfLoad.setText("SORTED as Figures: \n");
+
+                // Print the sorted list of figures to the text area
+                for (Figure f : figures) {
+                    tfLoad.append(f.toString() + "\n");
+                }
+            }
+        });
 
         //  MILESTONE F: Implement Save button
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String selectedFigure = (String) cbFigures.getSelectedItem();
+                switch (selectedFigure) {
+                    case "Rectangular Solid":
+                        String getRectangle = tfOne.getText();
+                        double lengthR = Double.parseDouble(getRectangle);
+                        String getWidth = tfTwo.getText();
+                        double widthR = Double.parseDouble(getWidth);
+                        String getHeightR = tfTwo.getText();
+                        double heightR = Double.parseDouble(getHeightR);
 
+                        Figure.RectangularSolid rectangularSolid = new Figure.RectangularSolid(lengthR, widthR, heightR);
+                        figures.add(rectangularSolid);
+
+                        tfVolume.setText(String.valueOf(rectangularSolid.getVolume()));
+                        tfSA.setText(String.valueOf(rectangularSolid.getSurfaceArea()));
+
+                        saveButton.setEnabled(false);
+                        tfOne.setEnabled(false);
+                        tfTwo.setEnabled(false);
+                        tfThree.setEnabled(false);
+                        cbFigures.setEnabled(false);
+                        break;
+                    case "Cube":
+                        String getEdgeLengthC = tfOne.getText();
+                        double edgeLengthC = Double.parseDouble(getEdgeLengthC);
+
+                        Figure.Cube cube = new Figure.Cube(edgeLengthC);
+                        figures.add(cube);
+                        tfVolume.setText(String.valueOf(cube.getVolume()));
+                        tfSA.setText(String.valueOf(cube.getSurfaceArea()));
+
+                        saveButton.setEnabled(false);
+                        tfOne.setEnabled(false);
+                        cbFigures.setEnabled(false);
+                        break;
+                    case "Cylinder":
+                        String getRadiusC = tfOne.getText();
+                        double radiusC = Double.parseDouble(getRadiusC);
+                        String getHeightC = tfTwo.getText();
+                        double heightC = Double.parseDouble(getHeightC);
+
+                        Figure.Cylinder cylinder = new Figure.Cylinder(radiusC, heightC);
+                        figures.add(cylinder);
+
+                        tfVolume.setText(String.valueOf(cylinder.getVolume()));
+                        tfSA.setText(String.valueOf(cylinder.getSurfaceArea()));
+
+                        saveButton.setEnabled(false);
+                        tfOne.setEnabled(false);
+                        tfTwo.setEnabled(false);
+                        cbFigures.setEnabled(false);
+                        break;
+                    case "Prism":
+                        String getPrism = tfOne.getText();
+                        double lengthP = Double.parseDouble(getPrism);
+                        String getHeightP = tfTwo.getText();
+                        double heightP = Double.parseDouble(getHeightP);
+
+                        Figure.Prism prism = new Figure.Prism(lengthP, heightP);
+                        figures.add(prism);
+
+                        tfVolume.setText(String.valueOf(prism.getVolume()));
+                        tfSA.setText(String.valueOf(prism.getSurfaceArea()));
+
+                        saveButton.setEnabled(false);
+                        tfOne.setEnabled(false);
+                        tfTwo.setEnabled(false);
+                        cbFigures.setEnabled(false);
+                        break;
+                    case "Right Circular Cone":
+                        String getRightCircularCone = tfOne.getText();
+                        double radiusR = Double.parseDouble(getRightCircularCone);
+                        String getHeightRCC = tfTwo.getText();
+                        double heightRCC = Double.parseDouble(getHeightRCC);
+
+                        Figure.RightCircularCone rightCircularCone = new Figure.RightCircularCone(radiusR, heightRCC);
+                        figures.add(rightCircularCone);
+
+                        tfVolume.setText(String.valueOf(rightCircularCone.getVolume()));
+                        tfSA.setText(String.valueOf(rightCircularCone.getSurfaceArea()));
+
+                        saveButton.setEnabled(false);
+                        tfOne.setEnabled(false);
+                        tfTwo.setEnabled(false);
+                        cbFigures.setEnabled(false);
+                        break;
+                    case "Ellipsoid":
+                        String getEllipsoid = tfOne.getText();
+                        double aE = Double.parseDouble(getEllipsoid);
+                        String getbE = tfTwo.getText();
+                        double bE = Double.parseDouble(getbE);
+                        String getcE = tfTwo.getText();
+                        double cE = Double.parseDouble(getcE);
+
+                        Figure.Ellipsoid ellipsoid = new Figure.Ellipsoid(aE, bE, cE);
+                        figures.add(ellipsoid);
+
+                        tfVolume.setText(String.valueOf(ellipsoid.getVolume()));
+                        tfSA.setText(String.valueOf(ellipsoid.getSurfaceArea()));
+
+                        saveButton.setEnabled(false);
+                        tfOne.setEnabled(false);
+                        tfTwo.setEnabled(false);
+                        tfThree.setEnabled(false);
+                        cbFigures.setEnabled(false);
+                        break;
+                    case "Sphere":
+                        String getSphere = tfOne.getText();
+                        double RadiusS = Double.parseDouble(getSphere);
+
+                        Figure.Sphere sphere = new Figure.Sphere(RadiusS);
+                        figures.add(sphere);
+
+                        tfVolume.setText(String.valueOf(sphere.getVolume()));
+                        tfSA.setText(String.valueOf(sphere.getSurfaceArea()));
+
+                        saveButton.setEnabled(false);
+                        tfOne.setEnabled(false);
+                        tfTwo.setEnabled(false);
+                        cbFigures.setEnabled(false);
+                        break;
+                    case "Tetrahedron":
+                        String getTetrahedron = tfOne.getText();
+                        double edgeLengthT = Double.parseDouble(getTetrahedron);
+
+                        Figure.Tetrahedron tetrahedron = new Figure.Tetrahedron(edgeLengthT);
+                        figures.add(tetrahedron);
+
+                        tfVolume.setText(String.valueOf(tetrahedron.getVolume()));
+                        tfSA.setText(String.valueOf(tetrahedron.getSurfaceArea()));
+
+                        saveButton.setEnabled(false);
+                        tfOne.setEnabled(false);
+                        cbFigures.setEnabled(false);
+                        break;
+                }
+                for (Figure figure : figures) {
+                    savedArea.append("Figure: " + figure.toString() + "\n" + "Volume: " + figure.getVolume() + "\n" + "Surface Area: " + figure.getSurfaceArea() + "\n");
+                    savedArea.append("\n");
+                }
+                savedArea.setBounds(10, 400, 330, 50);
+                add(savedArea);
             }
         });
 
@@ -45,11 +239,13 @@ public class INC_FORM extends JFrame {
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                tfOne.setText(null);
-                tfTwo.setText(null);
-                tfThree.setText(null);
+                cbFigures.setEnabled(true);
+                tfOne.setEnabled(true);
+                tfTwo.setEnabled(true);
+                tfThree.setEnabled(true);
                 tfVolume.setText(null);
                 tfSA.setText(null);
+                saveButton.setEnabled(true);
             }
         });
 
@@ -521,7 +717,7 @@ public class INC_FORM extends JFrame {
         INC_FORM inc = new INC_FORM();
         inc.setTitle("Figure");
         inc.setContentPane(inc.JPanel);
-        inc.setSize(500, 500);
+        inc.setSize(700, 500);
         inc.setDefaultCloseOperation(EXIT_ON_CLOSE);
         inc.setVisible(true);
     }

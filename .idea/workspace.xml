@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="245b536c-a05c-4806-9c93-504faa5a9845" name="Changes" comment="MILESTONE G: Implement Clear button">
+    <list default="true" id="245b536c-a05c-4806-9c93-504faa5a9845" name="Changes" comment=" MILESTONE E: Error checking for inputs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/INC_oop/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/INC_oop/Figure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/INC_oop/INC_FORM.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/INC_oop/INC_FORM.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/INC_oop/INC_FORM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/INC_oop/INC_FORM.java" afterDir="false" />
     </list>
@@ -93,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673968015509</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary=" MILESTONE E: Error checking for inputs">
+      <created>1674025727996</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674025727996</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,6 +120,7 @@
     <MESSAGE value=" MILESTONE C: Create Figure class and subclasses." />
     <MESSAGE value="MILESTONE D: Create and show fields for each figure" />
     <MESSAGE value="MILESTONE G: Implement Clear button" />
-    <option name="LAST_COMMIT_MESSAGE" value="MILESTONE G: Implement Clear button" />
+    <MESSAGE value=" MILESTONE E: Error checking for inputs" />
+    <option name="LAST_COMMIT_MESSAGE" value=" MILESTONE E: Error checking for inputs" />
   </component>
 </project>
