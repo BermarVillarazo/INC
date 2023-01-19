@@ -3,6 +3,14 @@ package INC_oop;
 public abstract class Figure implements Comparable<Figure> {
     double volume;
     double surfaceArea;
+    double numOne;
+    double numTwo;
+    double numThree;
+    public double getNumOne() {
+        return this.numOne;
+    }
+    public double getNumTwo() { return this.numTwo; }
+    public double getNumThree() { return this.numThree; }
 
     public void setVolume(double volume) {
         this.volume = volume;

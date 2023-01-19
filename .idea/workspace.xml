@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="245b536c-a05c-4806-9c93-504faa5a9845" name="Changes" comment=" MILESTONE E: Error checking for inputs">
+    <list default="true" id="245b536c-a05c-4806-9c93-504faa5a9845" name="Changes" comment=" MILESTONE F: Implement Save button.&#10; &#10; MILESTONE G: Implement Clear button I added changes the value for the tfOne, tfTwo, tfThree to true, and I also added the saveButton to setEnable it to true.&#10; &#10;  MILESTONE I: Implement the Sort by Volume button.&#10;  &#10;   MILESTONE J: Implement the Sort by Surface Area button.&#10;   &#10;   MILESTONE K: Implement the Sort by Figure button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/INC_oop/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/INC_oop/Figure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/INC_oop/INC_FORM.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/INC_oop/INC_FORM.form" afterDir="false" />
@@ -35,14 +35,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;283&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "225",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="INC_oop" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -101,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674025727996</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=" MILESTONE F: Implement Save button.&#10; &#10; MILESTONE G: Implement Clear button I added changes the value for the tfOne, tfTwo, tfThree to true, and I also added the saveButton to setEnable it to true.&#10; &#10;  MILESTONE I: Implement the Sort by Volume button.&#10;  &#10;   MILESTONE J: Implement the Sort by Surface Area button.&#10;   &#10;   MILESTONE K: Implement the Sort by Figure button">
+      <created>1674054470724</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674054470724</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,6 +133,7 @@
     <MESSAGE value="MILESTONE D: Create and show fields for each figure" />
     <MESSAGE value="MILESTONE G: Implement Clear button" />
     <MESSAGE value=" MILESTONE E: Error checking for inputs" />
-    <option name="LAST_COMMIT_MESSAGE" value=" MILESTONE E: Error checking for inputs" />
+    <MESSAGE value=" MILESTONE F: Implement Save button.&#10; &#10; MILESTONE G: Implement Clear button I added changes the value for the tfOne, tfTwo, tfThree to true, and I also added the saveButton to setEnable it to true.&#10; &#10;  MILESTONE I: Implement the Sort by Volume button.&#10;  &#10;   MILESTONE J: Implement the Sort by Surface Area button.&#10;   &#10;   MILESTONE K: Implement the Sort by Figure button" />
+    <option name="LAST_COMMIT_MESSAGE" value=" MILESTONE F: Implement Save button.&#10; &#10; MILESTONE G: Implement Clear button I added changes the value for the tfOne, tfTwo, tfThree to true, and I also added the saveButton to setEnable it to true.&#10; &#10;  MILESTONE I: Implement the Sort by Volume button.&#10;  &#10;   MILESTONE J: Implement the Sort by Surface Area button.&#10;   &#10;   MILESTONE K: Implement the Sort by Figure button" />
   </component>
 </project>

@@ -27,6 +27,8 @@ public class INC_FORM extends JFrame {
     private JButton volBtn;
     private JButton SABtn;
     private JButton figureBtn;
+    private JTextField txtLoad;
+    private JTextArea loadArea;
 
     List<Figure> figures = new ArrayList<>();
 
@@ -38,16 +40,60 @@ public class INC_FORM extends JFrame {
         tfOne.setVisible(false);
         tfTwo.setVisible(false);
         tfThree.setVisible(false);
+
+        loadButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                    String input = txtLoad.getText();
+
+                try {
+                    int index = Integer.parseInt(input);
+                    Figure selectedFigure = figures.get(index);
+
+                    tfOne.setText(String.valueOf(selectedFigure.getNumOne()));
+                    tfTwo.setText(String.valueOf(selectedFigure.getNumTwo()));
+                    tfThree.setText(String.valueOf(selectedFigure.getNumThree()));
+
+                    int selectedIndex = getIndexOfFigureType(selectedFigure);
+                    cbFigures.setSelectedIndex(selectedIndex);
+
+                    saveButton.setEnabled(false);
+                    tfOne.setEnabled(false);
+                    tfTwo.setEnabled(false);
+                    tfThree.setEnabled(false);
+                    cbFigures.setEnabled(false);
+
+                    loadArea.setText("LOAD:\n");
+                    loadArea.append(selectedFigure + "\n");
+
+                } catch (NumberFormatException event) {
+                    JOptionPane.showMessageDialog(null, "Please enter a valid number.");
+                }
+            }
+
+            private int getIndexOfFigureType(Figure selectedFigure) {
+                if (selectedFigure instanceof Figure.RectangularSolid) {
+                    return 0;
+                } else if (selectedFigure instanceof Figure.Cube) {
+                    return 1;
+                } else if (selectedFigure instanceof Figure.Cylinder) {
+                    return 2;
+                } else if (selectedFigure instanceof Figure.Prism) {
+                    return 3;
+                } else if (selectedFigure instanceof Figure.RightCircularCone) {
+                    return 4;
+                } else {
+                    return -1;
+                }
+            }
+        });
         volBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Sort the figures list by volume
                 Collections.sort(figures);
 
-                // Clear the text area
                 tfLoad.setText("SORTED as Volume: \n");
 
-                // Print the sorted list of figures to the text area
                 for (Figure f : figures) {
                     tfLoad.append(f.toString() + "\n");
                 }
@@ -57,13 +103,10 @@ public class INC_FORM extends JFrame {
         SABtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Sort the figures list by volume
                 Collections.sort(figures);
 
-                // Clear the text area
                 tfLoad.setText("SORTED as Surface Area: \n");
 
-                // Print the sorted list of figures to the text area
                 for (Figure f : figures) {
                     tfLoad.append(f.toString() + "\n");
                 }
@@ -73,13 +116,10 @@ public class INC_FORM extends JFrame {
         figureBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Sort the figures list by volume
                 Collections.sort(figures);
 
-                // Clear the text area
                 tfLoad.setText("SORTED as Figures: \n");
 
-                // Print the sorted list of figures to the text area
                 for (Figure f : figures) {
                     tfLoad.append(f.toString() + "\n");
                 }
@@ -717,7 +757,7 @@ public class INC_FORM extends JFrame {
         INC_FORM inc = new INC_FORM();
         inc.setTitle("Figure");
         inc.setContentPane(inc.JPanel);
-        inc.setSize(700, 500);
+        inc.setSize(1000, 500);
         inc.setDefaultCloseOperation(EXIT_ON_CLOSE);
         inc.setVisible(true);
     }
